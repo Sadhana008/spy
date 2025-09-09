@@ -1,39 +1,92 @@
-<html> 
-<head> 
-<title>Form Example</title> 
-</head> 
-<body bgcolor="#CCFF66"> 
-<form align="center"> 
-<h3 style="color:#F00">Personal Details</h3> 
-Name: 
-<input type="text" name="name" id="name"><br><br> 
-Password: 
-<input type="password" name="password" id="password"><br><br> 
-E-mail id: <input type="text" name="name" id="name"><br><br> 
-Gender: <input type="radio" name="radiogroup1" value="radio" id="radiogroup1"> Male 
-<input type="radio" name="radiogroup1" value="radio" id="radiogroup2"> Female<br><br> 
-Contact#: <input type="text" name="mobile" id="mobile"> 
-<h3 style="color:#F00">Educational Qualification</h3> 
-Degree: <select name="degree" id="degree"> 
-        <option selected>-- Select Group --</option> 
-        <option>B.Com</option> 
-        <option>B.sc</option> 
-        <option>B.com Computers</option> 
-        <option>B.A</option> 
-      </select><br>       <br> 
-Engineering: <select name="eng" id="eng"> 
-        <option selected>-- Select Group --</option> 
-        <option>CSE</option> 
-        <option>ECE</option> 
-        <option>CIVIL</option> 
-        <option>EEE</option> 
-      </select><br><br> 
-Hobbies: <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1">Playing chess 
-<input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup2">Reading Books<br><br> 
-<h3 style="color:#F00">Address</h3> 
-<textarea name="textarea" cols="35" rows="5" id="textarea"></textarea><br> <br> 
-Attach Resume: <input type="file" name="fileField" id="fileField"><br><br> 
-<input type="image" src="/images/submit_btn.png"> 
-</form> 
-</body> 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+  <style>
+    body {
+      background-color: #CCFF66;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    form {
+      display: inline-block;
+      text-align: left;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    h3 {
+      color: red;
+    }
+    input, select, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h3>Personal Details</h3>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="email">E-mail ID:</label>
+    <input type="email" id="email" name="email">
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male" style="display:inline;">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female" style="display:inline;">Female</label>
+
+    <label for="mobile">Contact#:</label>
+    <input type="text" id="mobile" name="mobile">
+
+    <h3>Educational Qualification</h3>
+
+    <label for="degree">Degree:</label>
+    <select id="degree" name="degree">
+      <option value="">-- Select Degree --</option>
+      <option value="bcom">B.Com</option>
+      <option value="bsc">B.Sc</option>
+      <option value="bcom-computers">B.Com Computers</option>
+      <option value="ba">B.A</option>
+    </select>
+
+    <label for="eng">Engineering:</label>
+    <select id="eng" name="eng">
+      <option value="">-- Select Group --</option>
+      <option value="cse">CSE</option>
+      <option value="ece">ECE</option>
+      <option value="civil">CIVIL</option>
+      <option value="eee">EEE</option>
+    </select>
+
+    <label>Hobbies:</label>
+    <input type="checkbox" id="chess" name="hobbies" value="chess">
+    <label for="chess" style="display:inline;">Playing Chess</label><br>
+    <input type="checkbox" id="books" name="hobbies" value="books">
+    <label for="books" style="display:inline;">Reading Books</label>
+
+    <h3>Address</h3>
+    <textarea id="address" name="address" rows="4" placeholder="Enter your address here"></textarea>
+
+    <label for="resume">Attach Resume:</label>
+    <input type="file" id="resume" name="resume">
+
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
 </html>
